@@ -28,7 +28,10 @@ def grafico_bar(
     xLabel,
     xTicks = 0
     ):
-
+    """
+    Função para criar um gráfico de barras
+    """
+    
     dados.plot(kind = 'bar', color = 'skyblue')
     
     plt.title(titulo, fontsize = TITLE_SIZE)
@@ -36,12 +39,26 @@ def grafico_bar(
     plt.xlabel(xLabel, fontsize = LABEL_SIZE)
     plt.xticks(rotation = xTicks)
     plt.show()
-#plt.ylabel('Receita (R$)')
-#plt.xlabel('Categoria')
-#plt.xticks(rotation = 0)
-
    
-#def grafico_barh():
+def grafico_barh(
+    dados,
+    titulo,
+    yLabel,
+    xLabel,
+    inverterY = True
+    ):
+    """
+    Função para criar um gráfico de barras horizontal
+    """
+    
+    dados.plot(kind = 'barh', color = 'salmon')
+    plt.title(titulo, fontsize = TITLE_SIZE)
+    plt.ylabel(yLabel, fontsize = LABEL_SIZE)
+    plt.xlabel(xLabel, fontsize = LABEL_SIZE)
+    
+    if inverterY:
+        plt.gca().invert_yaxis()  # Inverter o eixo y para que o produto mais vendido apareça no topo  
+    plt.show()
     
 #def grafico_line():
     
