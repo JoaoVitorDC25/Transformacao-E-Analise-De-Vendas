@@ -26,8 +26,7 @@ def grafico_bar(
     titulo,
     yLabel,
     xLabel,
-    xTicks = 0
-    ):
+    xTicks = 0):
     """
     Função para criar um gráfico de barras
     """
@@ -60,7 +59,22 @@ def grafico_barh(
         plt.gca().invert_yaxis()  # Inverter o eixo y para que o produto mais vendido apareça no topo  
     plt.show()
     
-#def grafico_line():
+def grafico_line(
+    dados,
+    titulo,
+    yLabel,
+    xLabel,
+    grid = True):
+    """
+    Função para criar um gráfico de linha
+    """
+    
+    dados.plot(kind = 'line', marker = '.', linestyle = '-')
+    plt.title(titulo, fontsize = TITLE_SIZE)
+    plt.ylabel(yLabel, fontsize = LABEL_SIZE)
+    plt.xlabel(xLabel, fontsize = LABEL_SIZE)
+    plt.grid(grid)
+    plt.show()
     
 #def grafico_pie():
     
