@@ -76,5 +76,19 @@ def grafico_line(
     plt.grid(grid)
     plt.show()
     
-#def grafico_pie():
-    
+def grafico_pie( dados):
+    """
+    Função para criar um gráfico de pizza
+    """
+
+    plt.pie(
+        dados,
+        labels = dados.index,
+        autopct = '%1.1f%%',
+        startangle = 180,
+        colors = ['lightgreen',
+                'orange',
+                'lightcoral'],
+        )
+    plt.title('Distribuição do Status de Entrega')
+    plt.show()    
