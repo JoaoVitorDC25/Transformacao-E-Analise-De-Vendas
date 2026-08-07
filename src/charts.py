@@ -88,7 +88,7 @@ def grafico_line(
     plt.savefig(PATH + titulo, dpi=DPI, bbox_inches='tight')
     plt.show()
     
-def grafico_pie( dados):
+def grafico_pie(dados):
     """
     Função para criar um gráfico de pizza
     """
@@ -105,5 +105,5 @@ def grafico_pie( dados):
     plt.title('Distribuição do Status de Entrega')
     
     plt.tight_layout()
-    plt.savefig(PATH + titulo, dpi=DPI, bbox_inches='tight')
+    plt.savefig(PATH + 'Distribuição do Status de Entrega', dpi=DPI, bbox_inches='tight')
     plt.show()   
