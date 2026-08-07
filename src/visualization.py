@@ -1,4 +1,4 @@
-from src.charts import grafico_bloxpot, grafico_bar, grafico_barh, grafico_line, grafico_pie
+from charts import grafico_bloxpot, grafico_bar, grafico_barh, grafico_line, grafico_pie
 
 
 def visualization(receita_por_categoria, 

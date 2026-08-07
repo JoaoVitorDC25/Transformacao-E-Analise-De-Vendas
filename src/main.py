@@ -3,8 +3,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-from src.data_generator import data_generator
-from src.visualization import visualization
+from preprocessing import preprocessing
+from data_generator import data_generator
+from visualization import visualization
+from charts import grafico_bloxpot
 
 df_vendas = data_generator()
 
@@ -26,6 +28,8 @@ print(f"\n ----- Verificando tipos de dados: ----- \n {df_vendas.dtypes}")
 # ----- 1. Limpeza e pré-processamento de dados -----
 
 df_limpo = df_vendas.copy()
+
+preprocessing(df_limpo)
 
 print("\n ----- Corrigindo os tipos de dados: ----- \n")
 

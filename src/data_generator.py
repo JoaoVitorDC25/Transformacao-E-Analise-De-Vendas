@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-from src.config import SEED
+from config import SEED
 
 def data_generator():
     np.random.seed(SEED)
