@@ -1,7 +1,7 @@
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-from config import FIGURE_SIZE, TITLE_SIZE, ESTILO_GRAFICO, LABEL_SIZE, LINESTYLE, MARKER
+from config import FIGURE_SIZE, TITLE_SIZE, ESTILO_GRAFICO, LABEL_SIZE, LINESTYLE, MARKER, DPI, PATH
 
 plt.rcParams['figure.figsize'] = FIGURE_SIZE
 
@@ -11,14 +11,17 @@ def configurar_estilo():
     """   
     sns.set_style(ESTILO_GRAFICO)
     
-def grafico_bloxpot(x, title):
+def grafico_bloxpot(x, titulo):
     """
     Função para criar um gráfico de boxplot
     """
     configurar_estilo()
-    
+        
     sns.boxplot(x = x)
-    plt.title(title)
+    plt.title(titulo)
+    
+    plt.tight_layout()
+    plt.savefig(PATH + titulo, dpi=DPI, bbox_inches='tight')
     plt.show()
     
 def grafico_bar(
@@ -37,6 +40,9 @@ def grafico_bar(
     plt.ylabel(yLabel, fontsize = LABEL_SIZE)
     plt.xlabel(xLabel, fontsize = LABEL_SIZE)
     plt.xticks(rotation = xTicks)
+    
+    plt.tight_layout()
+    plt.savefig(PATH + titulo, dpi=DPI, bbox_inches='tight')
     plt.show()
    
 def grafico_barh(
@@ -57,6 +63,9 @@ def grafico_barh(
     
     if inverterY:
         plt.gca().invert_yaxis()  # Inverter o eixo y para que o produto mais vendido apareça no topo  
+    
+    plt.tight_layout()
+    plt.savefig(PATH + titulo, dpi=DPI, bbox_inches='tight')
     plt.show()
     
 def grafico_line(
@@ -74,6 +83,9 @@ def grafico_line(
     plt.ylabel(yLabel, fontsize = LABEL_SIZE)
     plt.xlabel(xLabel, fontsize = LABEL_SIZE)
     plt.grid(grid)
+    
+    plt.tight_layout()
+    plt.savefig(PATH + titulo, dpi=DPI, bbox_inches='tight')
     plt.show()
     
 def grafico_pie( dados):
@@ -91,4 +103,7 @@ def grafico_pie( dados):
                 'lightcoral'],
         )
     plt.title('Distribuição do Status de Entrega')
-    plt.show()    
+    
+    plt.tight_layout()
+    plt.savefig(PATH + titulo, dpi=DPI, bbox_inches='tight')
+    plt.show()   
