@@ -1,7 +1,7 @@
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-from config import FIGURE_SIZE, TITLE_SIZE, ESTILO_GRAFICO, LABEL_SIZE
+from src.config import FIGURE_SIZE, TITLE_SIZE, ESTILO_GRAFICO, LABEL_SIZE
 
 plt.rcParams['figure.figsize'] = FIGURE_SIZE
 
