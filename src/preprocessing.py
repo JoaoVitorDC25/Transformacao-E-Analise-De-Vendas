@@ -1,5 +1,4 @@
 import pandas as pd
-import numpy as np
 
 from charts import grafico_bloxpot
 
@@ -47,3 +46,5 @@ def preprocessing(df_limpo):
 
     print(f"\n ----- Verificando valores ausentes: ----- \n {df_limpo.isnull().sum()}")
     print(f"\n ----- Verificando a presença de registros duplicados: ----- \n {df_limpo.duplicated().sum()}")
+    
+    return df_limpo
