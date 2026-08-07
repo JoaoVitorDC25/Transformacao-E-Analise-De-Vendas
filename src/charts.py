@@ -1,7 +1,7 @@
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-from src.config import FIGURE_SIZE, TITLE_SIZE, ESTILO_GRAFICO, LABEL_SIZE
+from src.config import FIGURE_SIZE, TITLE_SIZE, ESTILO_GRAFICO, LABEL_SIZE, LINESTYLE, MARKER
 
 plt.rcParams['figure.figsize'] = FIGURE_SIZE
 
@@ -69,7 +69,7 @@ def grafico_line(
     Função para criar um gráfico de linha
     """
     
-    dados.plot(kind = 'line', marker = '.', linestyle = '-')
+    dados.plot(kind = 'line', marker = MARKER, linestyle = LINESTYLE)
     plt.title(titulo, fontsize = TITLE_SIZE)
     plt.ylabel(yLabel, fontsize = LABEL_SIZE)
     plt.xlabel(xLabel, fontsize = LABEL_SIZE)
